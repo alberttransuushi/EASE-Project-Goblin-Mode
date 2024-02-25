@@ -36,8 +36,8 @@ ModelImporter:
       name: Walk
       takeName: iPi Default Take
       internalID: 1053614174267446024
-      firstFrame: 37
-      lastFrame: 73
+      firstFrame: 40
+      lastFrame: 105
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
