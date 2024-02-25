@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5977862003901322618}
   - component: {fileID: 5977862003901322617}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Smoky Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
