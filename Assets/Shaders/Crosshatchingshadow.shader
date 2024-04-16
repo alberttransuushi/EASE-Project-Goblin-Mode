@@ -80,7 +80,7 @@ Shader "Custom/Crosshatchingshadow"
             {
                 half4 c = tex2D(_MainTex, IN.uv_MainTex);
 
-                //o.screenUV = IN.screenPos.xy * 4 / IN.screenPos.w;
+                //o.screenUV = IN.screenPos.xy * 4 / IN.screenPos.w * _Repeat;
                 o.screenUV = IN.uv_MainTex * _Repeat;
                 half v = length(tex2D(_MainTex, IN.uv_MainTex).rgb);
                 o.val = v;
