@@ -7,10 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 3dscan 14
-  m_Shader: {fileID: 4800000, guid: 4c36fce0756959d43bc038e850cd3143, type: 3}
+  m_Name: model
+  m_Shader: {fileID: 4800000, guid: 6ba608f1a21f80544878c63b25d4611a, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: efdd34f3d3703184981d3009b2d0c37f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,20 +41,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _HvyTex:
-        m_Texture: {fileID: 2800000, guid: 30b76a94399676b47a756925dadf6fe6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _LitTex:
-        m_Texture: {fileID: 2800000, guid: 30b76a94399676b47a756925dadf6fe6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f7044dc1afe8c284388e912b660595e3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MedTex:
-        m_Texture: {fileID: 2800000, guid: 30b76a94399676b47a756925dadf6fe6, type: 3}
+        m_Texture: {fileID: 2800000, guid: cd72cce1168c3c14eb81bc8760b142fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -80,14 +69,15 @@ Material:
     - _DstBlend: 0
     - _GeoRes: 30
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.070710674
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.005
     - _Parallax: 0.02
-    - _Repeat: 10
+    - _RimPower: 0
+    - _RotationDegrees: 20
+    - _RotationSpeed: 10
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -96,5 +86,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

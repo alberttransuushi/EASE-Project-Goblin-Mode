@@ -5,9 +5,7 @@ Shader "Custom/AffineTest"
         _MainTex("Main Texture", 2D) = "white" {}
         _RampTex("Ramp Texture", 2D) = "white" {}
         _GeoRes("Geometric Resolution", Float) = 10.0
-        _RotationSpeed("Rotation Speed", Float) = 2.0
-        _RotationDegrees("Rotation Degrees", Float) = 0.0
-        _RimPower("Rim Power", range(0.1, 10.0)) = 100.0
+        _RimPower("Rim Power", range(0, 10.0)) = 100.0
         _RimColor("Rim Color", Color) = (0,0.5,0.5,0.0)
         _Color("Color", Color) = (0,0.5,0.5,0.0)
 
@@ -27,7 +25,6 @@ Shader "Custom/AffineTest"
                 float4 _MainTex_ST;
                 sampler2D _RampTex;
                 float _GeoRes;
-                float _RotationSpeed;
                 float4 _RimColor;
                 float4 _Color;
                 float _RimPower;
@@ -58,16 +55,6 @@ Shader "Custom/AffineTest"
 
                 void vert(inout appdata_full v, out Input o)
                 {
-                    v.texcoord.xy -= 0.5;
-                    float s = sin(_RotationSpeed * _Time);
-                    float c = cos(_RotationSpeed * _Time);
-                    float2x2 rotationMatrix = float2x2(c, -s, s, c);
-                    rotationMatrix *= 0.5;
-                    rotationMatrix += 0.5;
-                    rotationMatrix = rotationMatrix * 2 - 1;
-                    v.texcoord.xy = mul(v.vertex.xy, rotationMatrix);
-                    v.texcoord.xy += 0.5;
-
                     UNITY_INITIALIZE_OUTPUT(Input, o);
 
                     float4 wp = mul(UNITY_MATRIX_MV, v.vertex);
@@ -79,7 +66,6 @@ Shader "Custom/AffineTest"
                     float2 uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                     o.rez = float3(uv * sp.w, sp.w);
                 }
-
 
 
                 void surf(Input IN, inout SurfaceOutput o)
